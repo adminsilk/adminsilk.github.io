@@ -313,9 +313,10 @@
 	</style>
 </head>
 <body>
-	<audio autoplay loop>
+	<audio id="audioPlayer" loop>
 
 		<source src="/assets/game2.mp3" type="audio/mp3">
+		audio not supported
 		
 	</audio>
 	
@@ -448,6 +449,8 @@
 				'event_label': 'start',
 				'value': window.roullete.getCount(),
 			});
+			
+			audioPlayer.play();
 			window.roullete.start();
 			document.querySelector('#settings').classList.add('hide');
 			document.querySelector('#donate').classList.add('hide');
